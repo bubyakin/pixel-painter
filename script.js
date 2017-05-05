@@ -14,7 +14,7 @@ window.onload = () => {
     pixel: 50,
     mouseDown: false,
     grid: true,
-    color: '#FFFFFF',
+    color: '#FFE91B',
     fillColor: '#003366'
   };
 
@@ -63,11 +63,13 @@ window.onload = () => {
       state.grid = true;
     }
   });
+
   fillButton.addEventListener('click', function(ev) {
     state.fillColor = state.color;
     this.style.color = state.color;
     styleChildren(grid, {backgroundColor: state.color});
   });
+
   eraseButton.addEventListener('click', function(ev) {
     state.color = state.fillColor;
     colorPicker.value = state.color;
