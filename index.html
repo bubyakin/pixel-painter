@@ -4,38 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link rel="stylesheet" href="style.css">
   <script src="./functions/render_canvas.js" charset="utf-8"></script>
   <script src="./functions/style_children.js" charset="utf-8"></script>
   <script src="script.js" charset="utf-8"></script>
+
   <title>PAM</title>
 </head>
 <body>
-  <div>
-    <form method="post">
-      <fieldset>
+
+  <div id="all">
+
+    <div id="ctrl-panel">
+      <div id="ctrl-l">
         <label>
           Pixel
-          <input type="range" name="pixelSide" step="2" min="6" max="50" value="50">
+          <input id="pixel" type="range" name="pixelSide" step="2" min="6" max="50" value="50">
         </label>
-      </fieldset>
-      <fieldset class="panel-r">
-        <label>
-          Width
-          <input type="range" name="width" max="75">
-        </label>
-        <label>
-          Height
-          <input type="range" name="height" max="75">
-        </label>
-        <input type="submit" value="Load">
-        <button type="button">Fill</button>
-        <button type="button">Toggle Grid</button>
-        <button type="button">Erase</button>
-        <input type="color" value="#FFFFFF">
-      </fieldset>
-    </form>
-    <div></div>
+        <input id="color" type="color" value="#FFFFFF">
+      </div>
+
+      <div id="ctrl-r">
+        <div>
+          <form method="post">
+            <label>
+              Width
+              <input id="width" type="range" name="width" max="75">
+            </label>
+            <label>
+              Height
+              <input id="height" type="range" name="height" max="75">
+            </label>
+            <button type="submit" value="Load">Load</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="ctrl-panel-r">
+      <button id="fill" type="button">Fill</button>
+      <button id="toggle" type="button">Toggle Grid</button>
+      <button id="erase" type="button">Erase</button>
+    </div>
+
+    <div id="grid"></div>
+
   </div>
+
 </body>
 </html>

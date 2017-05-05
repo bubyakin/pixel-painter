@@ -1,13 +1,14 @@
 'use strict';
 // #eae4c2
 window.onload = () => {
-  const grid = document.querySelector('div > div');
-  const ctrlPanel = document.querySelector('form');
-  const zoom = document.querySelector('label:last-child > input');
-  const colorPicker = document.querySelector('input[type=color]');
-  const fillButton = document.querySelector('fieldset > button');
-  const gridToggle = document.querySelectorAll('fieldset > button')[1];
-  const eraseButton = document.querySelectorAll('fieldset > button')[2];
+  const grid = document.getElementById('grid');
+  const ctrlPanel = document.getElementById('ctrl-panel');
+  const load = document.querySelector('form');
+  const zoom = document.getElementById('pixel');
+  const colorPicker = document.getElementById('color');
+  const fillButton = document.getElementById('fill');
+  const gridToggle = document.getElementById('toggle');
+  const eraseButton = document.getElementById('erase');
   const state = {
     resolution: {w: 60, h: 35},
     pixel: 50,
@@ -32,11 +33,11 @@ window.onload = () => {
     ctrlPanel.style.pointerEvents = 'auto';
   });
 
-  ctrlPanel.addEventListener('submit', function(ev) {
+  load.addEventListener('submit', function(ev) {
     ev.preventDefault();
     state.resolution.w = this.width.value;
     state.resolution.h = this.height.value;
-    renderCanvas(grid, state.resolution, this.pixelSide.value, function(ev) {
+    renderCanvas(grid, state.resolution, state.pixel, function(ev) {
       if (state.mouseDown || ev.type == 'click')
         ev.target.style.backgroundColor = state.color;
     });
