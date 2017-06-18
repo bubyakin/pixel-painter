@@ -6,7 +6,6 @@ You can adjust the "resolution" of the canvas, as well as the side length used f
 
 ```JavaScript
 'use strict';
-// #eae4c2
 window.onload = () => {
   const grid = document.getElementById('grid');
   const ctrlPanel = document.getElementById('ctrl-panel');
