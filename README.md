@@ -1,6 +1,6 @@
 [https://pam.surge.sh/](https://pam.surge.sh/)
 
-This is an incredibly simple application for making pixel art. It was one of the first exercises we did at Galvanize but I refactored it for fun and practice.
+This is an incredibly simple application for making pixel art. It was one of the first exercises we did at Galvanize but I refactored it for fun and practice. Old version here: [https://ht44-pixel-art-maker.surge.sh/](https://ht44-pixel-art-maker.surge.sh/)
 
 You can adjust the "resolution" of the canvas, as well as the side length used for each "pixel". A "fill" button applies the current color everywhere, and the color of the "eraser" will always match the color of the fill.
 
