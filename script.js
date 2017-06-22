@@ -14,8 +14,8 @@ window.onload = () => {
     pixel: 50,
     mouseDown: false,
     grid: true,
-    color: '#FFE91B',
-    fillColor: '#003366'
+    color: '#008080',
+    fillColor: '#EAE1D0'
   };
 
   renderCanvas(grid, state.resolution, state.pixel, function(ev) {
